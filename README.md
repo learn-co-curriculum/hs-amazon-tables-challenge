@@ -1,45 +1,32 @@
----
-tags: sinatra, template
-languages: ruby
-resources: 0
----
+# Amazon Tables Challenge
 
-# Sinatra App Template
+Uh oh, somebody dropped Amazon's database! They've hired you to help recreate it! We're going to use ActiveRecord and Rake to setup migrations and create new tables in our database.
 
-## Structure
+## Instructions
 
-```bash
-sinatra-ar-lab-template/
-├── Gemfile
-├── Gemfile.lock
-├── README.md
-├── Rakefile
-├── app
-│   ├── controllers
-│   │   └── application_controller.rb
-│   ├── models
-│   │   └── sample_model.rb
-│   └── views
-│       └── layout.erb
-├── config
-│   └── environment.rb
-├── config.ru
-├── db
-│   ├── migrate
-│   ├── seeds.rb
-│   └── test.sqlite
-├── public
-│   └── stylesheets
-└── spec
-    ├── controllers
-    ├── features
-    ├── models
-    │   └── sample_model_spec.rb
-    └── spec_helper.rb
+First, let's create a `books` table with the following columns:
+
++ title
++ author
++ price
++ genre
+
+Remember to run `rake db:create_migration NAME=create_books` to create your migration file. Inside of the migration file, define an up and down method like this: 
+
+```ruby
+
+def up
+	create_table :books do |t|
+		t.string :title
+		t.string :author
+		t.float :price
+		t.string :genre
+	end
+end
+
+def down
+	drop_table :books
+end
 ```
 
-## Usage
-
-This template is for Sinatra-based labs with an MVC structure that use ActiveRecord.
-
-## Resources
+Once you've created your books table, create as many other tables as you can. Amazon needs a lot of different tables - look [here](http://www.amazon.com/gp/site-directory/ref=nav_shopall_btn) for ideas!
