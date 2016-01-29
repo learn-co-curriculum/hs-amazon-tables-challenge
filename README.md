@@ -31,4 +31,4 @@ end
 
 Once you've created your books table, create as many other tables as you can. Amazon needs a lot of different tables - look [here](http://www.amazon.com/gp/site-directory/ref=nav_shopall_btn) for ideas!
 
-<a href='https://learn.co/lessons/hs-amazon-tables-challenge' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/hs-amazon-tables-challenge' title='Amazon Tables Challenge'>Amazon Tables Challenge</a> on Learn.co and start learning to code for free.</p>
